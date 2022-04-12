@@ -1,0 +1,8 @@
+<h2>
+  {{(brands$ | async)?.length}} brands found
+</h2>
+<div>
+  <ul>
+    <li *ngFor="let brand of brands$ | async"><a routerLink="/markets/brands/{{name}}/{{brand}}">{{brand}}</a></li>
+  </ul>
+</div>

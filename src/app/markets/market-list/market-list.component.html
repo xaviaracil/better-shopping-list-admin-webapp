@@ -1,0 +1,10 @@
+<h2>
+  {{(markets$ | async)?.length}} markets found
+</h2>
+<div>
+  <ul>
+    <li *ngFor="let market of markets$ | async">
+      <a routerLink="/markets/brands/{{market.name.toLowerCase().replace(' ', '')}}">{{market.name}}</a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,20 @@
+.links {
+  padding-bottom: 30px;
+}
+
+.links a {
+  padding: 10px;
+}
+
+.links a, .links a.visited {
+  color: #0e0e0e;
+}
+
+.links a.active {
+  color: white;
+  background-color: #000078;
+}
+
+* {
+  box-sizing: border-box;
+}

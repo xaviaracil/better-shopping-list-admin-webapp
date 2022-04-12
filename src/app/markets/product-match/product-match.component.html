@@ -1,0 +1,9 @@
+<img [src]="marketProduct.image">
+{{marketProduct.name}}
+<select [(ngModel)]="selectedProductName" (ngModelChange)="onChange()">
+  <option *ngFor="let storeProduct of storeProducts" [value]="storeProduct.recordName">
+    {{storeProduct.fields.CD_name.value}}
+  </option>
+  <option value="ADD-NEW">New...</option>
+</select>
+<img *ngIf="selectedProduct()" [src]="selectedProduct().fields.CD_imageUrl.value">

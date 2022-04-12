@@ -1,0 +1,12 @@
+<h2>
+  {{(marketProducts$ | async)?.length}} product in market found
+  {{(storeProducts$ | async)?.length}} product in store found
+</h2>
+<div>
+  <ul>
+    <li *ngFor="let product of marketProducts$ | async">
+      <app-product-match *ngIf="storeProducts$ | async as storeProducts" [marketProduct]="product" [storeProducts]="storeProducts" (selectStoreProduct)="onSelectStoreProduct($event)"></app-product-match>
+    </li>
+  </ul>
+  <button (click)="sendMatches()">Send Matches</button>
+</div>
